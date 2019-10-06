@@ -18,8 +18,8 @@ public class GlossaryController {
     DefinitionServiceClient client;
 
     @GetMapping("/term/{term}")
-    public List<Definition> getDefinitionsByTerm(@PathVariable String term) {
-        return client.getDefinitionsFromService(term);
+    public List<Definition> getDefinitionsForTerm(@PathVariable String term) {
+        return client.getDefinitionsForTerm(term);
     }
 
 }
