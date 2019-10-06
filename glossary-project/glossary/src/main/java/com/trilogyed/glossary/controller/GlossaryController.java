@@ -1,7 +1,7 @@
 package com.trilogyed.glossary.controller;
 
 import com.trilogyed.glossary.model.Definition;
-import com.trilogyed.glossary.util.feign.DefinitionClient;
+import com.trilogyed.glossary.util.feign.DefinitionServiceClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,7 +15,7 @@ import java.util.List;
 public class GlossaryController {
 
     @Autowired
-    DefinitionClient client;
+    DefinitionServiceClient client;
 
     @GetMapping("/term/{term}")
     public List<Definition> getDefinitionsByTerm(@PathVariable String term) {
