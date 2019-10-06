@@ -8,6 +8,12 @@ public class Definition {
     private String term;
     private String definition;
 
+    public Definition(Integer id, String term, String definition) {
+        this.id = id;
+        this.term = term;
+        this.definition = definition;
+    }
+
     public Integer getId() {
         return id;
     }
